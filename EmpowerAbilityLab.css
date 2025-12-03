@@ -1,0 +1,183 @@
+/* Our team added padding so the page does not hide under the navbar */
+body {
+  padding-top: 4rem;
+}
+
+/* We added a strong focus outline so keyboard users can see where they are */
+:focus {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+
+/* Skip link for screen reader and keyboard users
+   This helps users jump directly to the main content */
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  z-index: 1000;
+}
+
+/* Skip link stays hidden unless focused */
+.skip-link:not(:focus) {
+  clip: rect(0 0 0 0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  width: 1px;
+}
+
+/* Each SPA view is hidden using CSS instead of display none in JS
+   This keeps the HTML cleaner */
+.view-section[hidden] {
+  display: none;
+}
+
+/* We changed navbar link colors to white so contrast passes WCAG AA */
+.navbar-dark {
+  background-color: #343a40;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:visited {
+  color: #ffffff !important;
+}
+
+/* Hover and focus are lighter white to show interaction feedback */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: #e6e6e6 !important;
+  text-decoration: underline;
+}
+
+/* We made the active link bold for visibility */
+.navbar-dark .navbar-nav .active > .nav-link {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+/* Modal backdrop added by our team to create a dark overlay for accessibility */
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal content with padding and white background for good contrast */
+.modal-content-custom {
+  background: #ffffff;
+  padding: 1.5rem;
+  max-width: 36rem;
+  width: 90%;
+  border-radius: 0.25rem;
+}
+
+/* Switch button used for email updates
+   We kept the design simple so it is keyboard friendly */
+.switch-button {
+  border: 1px solid #cccccc;
+  padding: 0.3rem 0.75rem;
+  border-radius: 1rem;
+  background: #f8f9fa;
+}
+
+/* When switch is turned on we change it to blue for clear feedback */
+.switch-button[aria-checked="true"] {
+  background: #007bff;
+  color: #ffffff;
+}
+
+/* Messages for errors and thank you states
+   We used yellow because users can see it easily */
+.form-messages {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.form-messages:not(:empty) {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Red star used to show required fields */
+.required-star {
+  color: #d0021b;
+}
+
+/* Footer spacing added by our team to match the mockup */
+.footer-main {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* A little spacing between service sections */
+.service-block + .service-block {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1rem;
+}
+
+/* ----------------------------
+   WCAG AA FIXES FOR BUTTONS
+   ---------------------------- */
+
+/* We replaced the original Bootstrap blue because it failed contrast tests */
+.btn-primary {
+  background-color: #005fcc !important;
+  border-color: #005fcc !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #0049a3 !important;
+  border-color: #0049a3 !important;
+}
+
+/* Outline buttons also failed contrast
+   So we darkened the border and hover state */
+.btn-outline-primary {
+  border-color: #005fcc !important;
+  color: #005fcc !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #005fcc !important;
+  color: #ffffff !important;
+}
+
+/* We changed secondary button colors to darker gray so text is readable */
+.btn-secondary {
+  background-color: #4a4a4a !important;
+  border-color: #4a4a4a !important;
+  color: #ffffff !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #3a3a3a !important;
+  border-color: #3a3a3a !important;
+}
+
+/* Big focus ring on all buttons for accessibility
+   Helps users with low vision */
+.btn:focus,
+button:focus {
+  outline: 3px solid #ffbf47 !important;
+  outline-offset: 2px;
+}
