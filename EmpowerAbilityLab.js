@@ -1,4 +1,4 @@
-// Script that controls the single page app
+// controls the single page app
 function knowledgeRunner() {
   const sections = document.querySelectorAll(".view-section");
   const navLinks = document.querySelectorAll("[data-nav]");
@@ -20,7 +20,6 @@ function knowledgeRunner() {
     }
     document.title = "Empower Ability Labs " + titlePart;
 
-    // Update active state in the nav
     navLinks.forEach((link) => {
       const target = link.getAttribute("data-nav") || "home";
       if (target === id) {
@@ -40,7 +39,6 @@ function knowledgeRunner() {
       main.focus();
     }
 
-    // Manage browser history
     if (push) {
       history.pushState({ view: id }, "", "#" + id);
     }
@@ -209,5 +207,4 @@ function knowledgeRunner() {
   }
 }
 
-// Run script when document is ready
 document.addEventListener("DOMContentLoaded", knowledgeRunner);
