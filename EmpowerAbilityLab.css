@@ -203,3 +203,10 @@ button:focus {
   outline: 3px solid #2563eb !important;
   outline-offset: 2px;
 }
+
+
+/* Justify the three home page cards */
+.container.mt-4 article p,
+.container.mt-4 article li {
+  text-align: justify;
+}
