@@ -1,15 +1,14 @@
-/* Space so the fixed navbar does not cover content */
+
 body {
   padding-top: 4rem;
 }
 
-/* Strong focus outline for all focusable elements */
+/* focus outline for all focusable elements */
 :focus {
   outline: 3px solid #2563eb;
   outline-offset: 2px;
 }
 
-/* Skip link appears at the top when focused */
 .skip-link {
   position: absolute;
   left: 0;
@@ -20,7 +19,6 @@ body {
   z-index: 1000;
 }
 
-/* Skip link is visually hidden until focused */
 .skip-link:not(:focus) {
   clip: rect(0 0 0 0);
   border: 0;
@@ -36,16 +34,10 @@ body {
   display: none;
 }
 
-/* ================================
-   BRIGHT NAVBAR THEME WITH CONTRAST
-   ================================ */
-
-/* Bright navbar background */
 .navbar-dark {
   background-color: #5e8bed !important;
 }
 
-/* Default nav link color */
 .navbar-dark .navbar-nav .nav-link {
   color: #0b1120 !important;
   font-weight: normal !important;
@@ -57,7 +49,7 @@ body {
   color: #0b1120 !important;
 }
 
-/* Hover and focus state - color only */
+/* Hover and focus */
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
   color: #eef0f3 !important;
@@ -79,9 +71,6 @@ body {
   outline-offset: 2px;
 }
 
-/* ================================
-   MODAL
-   ================================ */
 
 .modal-backdrop-custom {
   position: fixed;
@@ -100,10 +89,6 @@ body {
   border-radius: 0.25rem;
 }
 
-/* ================================
-   SWITCH
-   ================================ */
-
 .switch-button {
   border: 1px solid #cccccc;
   padding: 0.3rem 0.75rem;
@@ -116,9 +101,6 @@ body {
   color: #ffffff;
 }
 
-/* ================================
-   FORM MESSAGES
-   ================================ */
 
 .form-messages {
   margin-top: 0.75rem;
@@ -133,14 +115,10 @@ body {
   color: #856404;
 }
 
-/* Red star for required fields */
+/* required fields */
 .required-star {
   color: #d0021b;
 }
-
-/* ================================
-   FOOTER
-   ================================ */
 
 .footer-main {
   margin-top: 2rem;
@@ -149,15 +127,11 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-/* A little spacing between service sections */
+/* little spacing between service sections */
 .service-block + .service-block {
   border-top: 1px solid #e5e5e5;
   padding-top: 1rem;
 }
-
-/* ================================
-   BUTTONS WCAG AA
-   ================================ */
 
 /* Primary button */
 .btn-primary {
