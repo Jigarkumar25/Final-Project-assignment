@@ -89,18 +89,55 @@ body {
   border-radius: 0.25rem;
 }
 
+/* Slimmer toggle switch */
 .switch-button {
-  border: 1px solid #cccccc;
-  padding: 0.3rem 0.75rem;
-  border-radius: 1rem;
-  background: #f8f9fa;
+  position: relative;
+  width: 90px;
+  height: 28px;              /* ↓ reduced height */
+  background-color: #d1d5db;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  padding-left: 36px;       /* adjusted for smaller height */
+  padding-right: 12px;
+  font-weight: 600;
+  font-size: 13px;          /* slightly smaller text */
+  line-height: 28px;        /* match new height */
+  color: #111827;
+  text-align: right;
+  transition: background-color 0.2s ease;
+  margin-left: 12px; 
+}
+
+.switch-button::after {
+  content: "";
+  position: absolute;
+  top: 3px;                
+  left: 3px;
+  width: 22px;              
+  height: 22px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
 }
 
 .switch-button[aria-checked="true"] {
-  background: #007bff;
+  background-color: #22c55e;
   color: #ffffff;
+  text-align: left;
+  padding-left: 12px;
+  padding-right: 36px;
 }
 
+/* Move the white circle when ON */
+.switch-button[aria-checked="true"]::after {
+  transform: translateX(56px);
+}
+
+.switch-button:focus {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
 
 .form-messages {
   margin-top: 0.75rem;
@@ -127,7 +164,6 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-/* little spacing between service sections */
 .service-block + .service-block {
   border-top: 1px solid #e5e5e5;
   padding-top: 1rem;
