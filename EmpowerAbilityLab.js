@@ -191,8 +191,13 @@ function knowledgeRunner() {
         messages.focus();
       } else {
         email.removeAttribute("aria-invalid");
-        messages.textContent =
-          "Thank you. We have received your request.";
+        messages.textContent = "Thank you. We have received your request.";
+
+        /* Auto clear message after 10 seconds */
+        setTimeout(() => {
+          messages.textContent = "";
+        }, 10000);
+
         form.reset();
 
         if (eventDetailsGroup) {
@@ -202,6 +207,7 @@ function knowledgeRunner() {
           emailSwitch.setAttribute("aria-checked", "false");
           emailSwitch.textContent = "Off";
         }
+
       }
     });
   }
