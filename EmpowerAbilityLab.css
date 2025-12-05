@@ -5,7 +5,7 @@ body {
 
 /* focus outline for all focusable elements */
 :focus {
-  outline: 3px solid #2563eb;
+  outline: 3px solid #ffffff;
   outline-offset: 2px;
 }
 
@@ -210,7 +210,7 @@ body {
 /* Focus ring for buttons */
 .btn:focus,
 button:focus {
-  outline: 3px solid #2563eb !important;
+  outline: 3px solid #ffffff !important;
   outline-offset: 2px;
 }
 
