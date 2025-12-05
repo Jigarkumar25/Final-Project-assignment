@@ -5,7 +5,7 @@ body {
 
 /* focus outline for all focusable elements */
 :focus {
-  outline: 3px solid #ffffff;
+  outline: 3px solid #ffea00;
   outline-offset: 2px;
 }
 
@@ -52,9 +52,10 @@ body {
 /* Hover and focus */
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
-  color: #eef0f3 !important;
+  color: #ffffff !important;
   background-color: transparent;
   text-decoration: none !important;
+  outline-offset: 2px;
 }
 
 /* Active link - color only */
@@ -63,12 +64,6 @@ body {
   color: #0b1120 !important;
   font-weight: normal !important;
   text-decoration: none !important;
-}
-
-/* Keyboard focus outline for nav */
-.navbar-dark .navbar-nav .nav-link:focus {
-  outline: 3px solid #f8f8f8;
-  outline-offset: 2px;
 }
 
 
@@ -93,16 +88,16 @@ body {
 .switch-button {
   position: relative;
   width: 90px;
-  height: 28px;              /* ↓ reduced height */
+  height: 28px;              
   background-color: #d1d5db;
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  padding-left: 36px;       /* adjusted for smaller height */
+  padding-left: 36px;      
   padding-right: 12px;
   font-weight: 600;
-  font-size: 13px;          /* slightly smaller text */
-  line-height: 28px;        /* match new height */
+  font-size: 13px;          
+  line-height: 28px;        
   color: #111827;
   text-align: right;
   transition: background-color 0.2s ease;
@@ -210,7 +205,7 @@ body {
 /* Focus ring for buttons */
 .btn:focus,
 button:focus {
-  outline: 3px solid #ffffff !important;
+  outline: 3px solid #ffea00 !important;
   outline-offset: 2px;
 }
 
@@ -219,4 +214,14 @@ button:focus {
 .container.mt-4 article p,
 .container.mt-4 article li {
   text-align: justify;
+}
+
+/* Yellow focus for all form fields */
+.form-control:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #ffea00 !important;          
+  box-shadow: 0 0 0 3px #ffea00 !important;  
+  outline: none !important;                  
 }
