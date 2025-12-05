@@ -67,7 +67,7 @@ body {
 
 /* Keyboard focus outline for nav */
 .navbar-dark .navbar-nav .nav-link:focus {
-  outline: 3px solid #2563eb;
+  outline: 3px solid #f8f8f8;
   outline-offset: 2px;
 }
 
